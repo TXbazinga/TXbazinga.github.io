@@ -349,8 +349,8 @@
           
             <p>##一、模块化系统演进：</p>
 <p>###1、传统：</p>
-<p><script src="“module.js”">标签；</p>
-<p>###2、commonJS：</p>
+<pre><code>&lt;script src=“module.js”&gt;标签；
+</code></pre><p>###2、commonJS：</p>
 <p>协同require（）同步加载，再通过exports或module.exports来导出需要暴露的接口；不能加载多个模块；不适合浏览器加载。</p>
 <p>###3、AMD:</p>
 <p>异步require，通过接口define（） 异步加载；可并行加载多个模块；适合浏览器。</p>
@@ -372,8 +372,22 @@
 <p>1、两份配置文件webpack.config.production.js/webpack.config.development.js，然后不同场景下，使用不同的配置文件。<br>2、通过module.exports返回函数，该函数能接受参数。<br>相对来说，第一种更简单，但是重复配置多；第二种更灵活，推荐第二种方式。</p>
 <p>###webpack 如何最佳配置？</p>
 <p>webpack官方提供的配置方法是通过module.exports返回一个json，但是这种场景不灵活，不能适配多种场景。比如要解决：production模式和development模式，webpack的配置是有差异的，大致有两种思路。<br>1、两份配置文件webpack.config.production.js/webpack.config.development.js<br>，然后不同场景下，使用不同的配置文件。<br>2、通过module.exports返回函数，该函数能接受参数。<br>相对来说，第一种更简单，但是重复配置多；第二种更灵活，推荐第二种方式。那么，按返回函数的方式的配置代码架子如下：</p>
-<p>module.exports = function(env) {<br>return { context: config.context,<br>entry: config.src, output: { path: path.join(config.jsDest, project),<br>filename: ‘[name].js’,<br>chunkFilename: ‘[name].[chunkhash:8].js’, publicPath: ‘/assets/‘ + project + ‘/‘<br>},<br>devtool: “eval”, watch: false, profile: true, cache: true, module: {<br>loaders: getLoaders(env)<br>},<br>resolve: {<br>alias: getAlias(env)<br>},<br>plugins: getPlugins(env)<br>};<br>}</p>
-<p>###其中关键的配置这儿简单介绍如下：</p>
+<pre><code>module.exports = function(env) {
+return { context: config.context,
+entry: config.src, output: { path: path.join(config.jsDest, project),
+filename: &apos;[name].js&apos;,
+chunkFilename: &apos;[name].[chunkhash:8].js&apos;, publicPath: &apos;/assets/&apos; + project + &apos;/&apos;
+},
+devtool: &quot;eval&quot;, watch: false, profile: true, cache: true, module: {
+loaders: getLoaders(env)
+},
+resolve: {
+alias: getAlias(env)
+},
+plugins: getPlugins(env)
+};
+}
+</code></pre><p>###其中关键的配置这儿简单介绍如下：</p>
 <p>context：上下文。<br>entry：入口文件，是所有依赖关系的入口，webpack从这个入口开始静态解析，分析模块之间的依赖关系。<br>output：打包输出的配置。<br>devtools：SourceMap选项，便于开发模式下调试。<br>watch：监听模式，增量更新，开发必备！<br>profile：优化。<br>cache：webpack构建的过程中会生成很多临时的文件，打开cache可以让这些临时的文件缓存起来，从而更快的构建。<br>module.loaders：如前文介绍，loaders用来对文件做预处理。这样webpack就可以打包任何静态文件。<br>resolve.alias：模块别名，这样可以更方便的引用模块。<br>plugins：如前文介绍，webpack的一些内置功能均是以插件的形式提供。</p>
 <p>##六、webpack样式：</p>
 <p>内嵌css（不推荐）、独立的css、公共的css样式；</p>
@@ -401,7 +415,7 @@
 <p>rake任务；</p>
 <p>##十五、常用插件：</p>
 <p>1、解析压缩美化chunk：UglifyJsPlugin new webpack.optimize.UglifyJsPlugin([options])；<br>2、分离css文件；ExtractTextPlugin var ExtractTextPlugin = require(“extract-text-webpack-plugin”);<br>3、删除重复依赖；DedupePlugin new webpack.optimize.DedupePlugin()；<br>4、跳过编译出错并记录；NoErrorsPlugin new webpack.NoErrorsPlugin()；<br>5、提取公共模块；CommonsChunkPlugin new webpack.optimize.CommonsChunkPlugin(options)；</p>
-</script></p>
+
           
         
       
