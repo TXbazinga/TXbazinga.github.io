@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="webpack," />
 
 
 
@@ -87,15 +87,46 @@
 
 
 
-<meta name="description" content="Keep hungry, Keep foolish!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TangXu's Notes">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="##一、模块化系统演进：
+###1、传统：
+标签；
+###2、commonJS：
+协同require（）同步加载，再通过exports或module.exports来导出需要暴露的接口；不能加载多个模块；不适合浏览器加载。
+###3、AMD:
+异步require，通过接口define（） 异步加载；可并行加载多个模块；适合浏览器。
+###4、CMD:
+类似AMD；
+###5、UMD:
+是模块跨平台">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack15个知识点!">
+<meta property="og:url" content="http://yoursite.com/2017/03/13/webpack/index.html">
 <meta property="og:site_name" content="TangXu's Notes">
-<meta property="og:description" content="Keep hungry, Keep foolish!">
+<meta property="og:description" content="##一、模块化系统演进：
+###1、传统：
+标签；
+###2、commonJS：
+协同require（）同步加载，再通过exports或module.exports来导出需要暴露的接口；不能加载多个模块；不适合浏览器加载。
+###3、AMD:
+异步require，通过接口define（） 异步加载；可并行加载多个模块；适合浏览器。
+###4、CMD:
+类似AMD；
+###5、UMD:
+是模块跨平台">
+<meta property="og:updated_time" content="2017-03-13T09:16:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TangXu's Notes">
-<meta name="twitter:description" content="Keep hungry, Keep foolish!">
+<meta name="twitter:title" content="webpack15个知识点!">
+<meta name="twitter:description" content="##一、模块化系统演进：
+###1、传统：
+标签；
+###2、commonJS：
+协同require（）同步加载，再通过exports或module.exports来导出需要暴露的接口；不能加载多个模块；不适合浏览器加载。
+###3、AMD:
+异步require，通过接口define（） 异步加载；可并行加载多个模块；适合浏览器。
+###4、CMD:
+类似AMD；
+###5、UMD:
+是模块跨平台">
 
 
 
@@ -123,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/13/webpack/"/>
 
 
 
 
 
-  <title> TangXu's Notes </title>
+  <title> webpack15个知识点! | TangXu's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +185,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,9 +288,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -291,10 +320,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/13/webpack/" itemprop="url">
-                  webpack15个知识点!
-                </a>
+                webpack15个知识点!
               
             
           </h1>
@@ -345,9 +371,7 @@
       
 
       
-        
-          
-            <p>##一、模块化系统演进：</p>
+        <p>##一、模块化系统演进：</p>
 <p>###1、传统：</p>
 <p><script src="“module.js”">标签；</p>
 <p>###2、commonJS：</p>
@@ -402,39 +426,50 @@
 <p>##十五、常用插件：</p>
 <p>1、解析压缩美化chunk：UglifyJsPlugin new webpack.optimize.UglifyJsPlugin([options])；<br>2、分离css文件；ExtractTextPlugin var ExtractTextPlugin = require(“extract-text-webpack-plugin”);<br>3、删除重复依赖；DedupePlugin new webpack.optimize.DedupePlugin()；<br>4、跳过编译出错并记录；NoErrorsPlugin new webpack.NoErrorsPlugin()；<br>5、提取公共模块；CommonsChunkPlugin new webpack.optimize.CommonsChunkPlugin(options)；</p>
 </script></p>
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+        </div>
+      
+
+      
+        
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -442,6 +477,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -627,6 +666,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
