@@ -241,16 +241,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-search">
-          <a href="/search" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-search"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
 
       
         <li class="menu-item menu-item-search">
@@ -400,21 +390,9 @@
 
       
         
-          <p>##一、模块化系统演进：</p>
-<p>###1、传统：</p>
-<pre><code>&lt;script src=“module.js”&gt;标签；
-</code></pre><p>###2、commonJS：</p>
-<p>协同require（）同步加载，再通过exports或module.exports来导出需要暴露的接口；不能加载多个模块；不适合浏览器加载。</p>
-<p>###3、AMD:</p>
-<p>异步require，通过接口define（） 异步加载；可并行加载多个模块；适合浏览器。</p>
-<p>###4、CMD:</p>
-<p>类似AMD；</p>
-<p>###5、UMD:</p>
-<p>是模块跨平台解决方案；</p>
-<p>###6、ES6:</p>
-<p>尽量静态化；编译时就能确定模块的依赖关系及输入输出变量；CommonJs和AMD都只能在运行时确定这些东西。<br>优点：静态分析，提前编译；面向未来的标准；<br>缺点：<br>1、浏览器原生兼容性差，所以一般都编译成ES5。<br>2、目前可以拿来即用的模块少，生态差。</p>
-<p>###7、期望的模块：</p>
-<p>可以兼容多种模块风格，尽量可以利用已有的代码，不仅仅只是 JavaScript 模块化，还有 CSS、图片、字体等资源也需要模块化。<br>
+          <h3 id="一、模块化系统演进："><a href="#一、模块化系统演进：" class="headerlink" title="一、模块化系统演进："></a>一、模块化系统演进：</h3><h4 id="1、传统："><a href="#1、传统：" class="headerlink" title="1、传统："></a>1、传统：</h4><pre><code>&lt;script src=“module.js”&gt;标签；
+</code></pre><h4 id="2、commonJS："><a href="#2、commonJS：" class="headerlink" title="2、commonJS："></a>2、commonJS：</h4><p>协同require（）同步加载，再通过exports或module.exports来导出需要暴露的接口；不能加载多个模块；不适合浏览器加载。</p>
+<h4 id="3、AMD"><a href="#3、AMD" class="headerlink" title="3、AMD:"></a>3、AMD:</h4><p>异步require，通过接口define（） 异步加载；可并行加载多个模块；适合浏览器。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/13/webpack/#more" rel="contents">
