@@ -178,7 +178,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;转自：-伯乐在线-http-blog-jobbole-com-78946&quot;&gt;&lt;a href=&quot;#转自：-伯乐在线-http-blog-jobbole-com-78946&quot; class=&quot;headerlink&quot; title=&quot;转自：[伯乐在线]http://blog.jobbole.com/78946/&quot;&gt;&lt;/a&gt;转自：[伯乐在线]&lt;a href=&quot;http://blog.jobbole.com/78946/&quot;&gt;http://blog.jobbole.com/78946/&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;AngularJS是目前最为活跃的JavaScript框架之一，AngularJS的目标之一是简化开发过程，这使得AngularJS非常善于构建小型app原型，但AngularJS对于全功能的客户端应用程序同样强大，它结合了开发简便，特性广泛和出众的性能，使其被广泛使用。然而，大量使用也会产生诸多误区。以下这份列表摘取了常见的一些AngularJS的错误用法，尤其是在app开发过程中。&lt;br&gt;
+      &lt;h3 id=&quot;转自：-伯乐在线-http-blog-jobbole-com-78946&quot;&gt;&lt;a href=&quot;#转自：-伯乐在线-http-blog-jobbole-com-78946&quot; class=&quot;headerlink&quot; title=&quot;转自：[伯乐在线]http://blog.jobbole.com/78946/&quot;&gt;&lt;/a&gt;转自：[伯乐在线]&lt;a href=&quot;http://blog.jobbole.com/78946/&quot;&gt;http://blog.jobbole.com/78946/&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;AngularJS是目前最为活跃的JavaScript框架之一，AngularJS的目标之一是简化开发过程，这使得AngularJS非常善于构建小型app原型，但AngularJS对于全功能的客户端应用程序同样强大，它结合了开发简便，特性广泛和出众的性能，使其被广泛使用。然而，大量使用也会产生诸多误区。以下这份列表摘取了常见的一些AngularJS的错误用法，尤其是在app开发过程中。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -232,7 +232,7 @@
 &lt;p&gt;2.&lt;code&gt;getInitialState&lt;/code&gt; (获取默认状态)&lt;/p&gt;
 &lt;p&gt;作用于组件的实例，在实例创建时调用一次，用于初始化每个实例的state，此时可以访问this.props。&lt;/p&gt;
 &lt;p&gt;3.&lt;code&gt;componentWillMount&lt;/code&gt; (组件将要构建)&lt;/p&gt;
-&lt;p&gt;在完成首次渲染之前调用，此时仍可以修改组件的state。&lt;br&gt;
+&lt;p&gt;在完成首次渲染之前调用，此时仍可以修改组件的state。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -295,7 +295,7 @@ plugins: getPlugins(env)
     
       &lt;h3 id=&quot;一、模块化系统演进：&quot;&gt;&lt;a href=&quot;#一、模块化系统演进：&quot; class=&quot;headerlink&quot; title=&quot;一、模块化系统演进：&quot;&gt;&lt;/a&gt;一、模块化系统演进：&lt;/h3&gt;&lt;h4 id=&quot;1、传统：&quot;&gt;&lt;a href=&quot;#1、传统：&quot; class=&quot;headerlink&quot; title=&quot;1、传统：&quot;&gt;&lt;/a&gt;1、传统：&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;script src=“module.js”&amp;gt;标签；
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;2、commonJS：&quot;&gt;&lt;a href=&quot;#2、commonJS：&quot; class=&quot;headerlink&quot; title=&quot;2、commonJS：&quot;&gt;&lt;/a&gt;2、commonJS：&lt;/h4&gt;&lt;p&gt;协同require（）同步加载，再通过exports或module.exports来导出需要暴露的接口；不能加载多个模块；不适合浏览器加载。&lt;/p&gt;
-&lt;h4 id=&quot;3、AMD&quot;&gt;&lt;a href=&quot;#3、AMD&quot; class=&quot;headerlink&quot; title=&quot;3、AMD:&quot;&gt;&lt;/a&gt;3、AMD:&lt;/h4&gt;&lt;p&gt;异步require，通过接口define（） 异步加载；可并行加载多个模块；适合浏览器。&lt;br&gt;
+&lt;h4 id=&quot;3、AMD&quot;&gt;&lt;a href=&quot;#3、AMD&quot; class=&quot;headerlink&quot; title=&quot;3、AMD:&quot;&gt;&lt;/a&gt;3、AMD:&lt;/h4&gt;&lt;p&gt;异步require，通过接口define（） 异步加载；可并行加载多个模块；适合浏览器。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
