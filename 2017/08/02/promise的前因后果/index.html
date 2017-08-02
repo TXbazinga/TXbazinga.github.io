@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="React," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -89,28 +89,21 @@
 
 
 
-<meta name="description" content="React组件的生命周期创建期(五个阶段)1.getDefaultProps(获取默认属性)
-作用于组件类，只调用一次，返回对象用于设置默认的props，对于引用值，会在实例中共享。
-2.getInitialState (获取默认状态)
-作用于组件的实例，在实例创建时调用一次，用于初始化每个实例的state，此时可以访问this.props。
-3.componentWillMount (组件将要构">
+<meta name="description" content="异步编程众所周知javascript是单线程的，但实际应用中难免会出现异步逻辑。所谓异步逻辑就是代码执行到此处并不会立即得到结果，直观上往往需要等待一段时间。比如文件读取、ajax异步接口调用。
+ES5对异步操作的处理局限于事件监听或异步回调。node的API均采用error-first的callback形式，因此出现了臭名昭著的回调地狱。通过层层嵌套的回调写法，实现异步操作的逻辑流程控制。目的虽">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React生命周期">
-<meta property="og:url" content="http://yoursite.com/2017/03/15/React生命周期/index.html">
+<meta property="og:title" content="promise的前因后果">
+<meta property="og:url" content="http://yoursite.com/2017/08/02/promise的前因后果/index.html">
 <meta property="og:site_name" content="TangXu's Notes">
-<meta property="og:description" content="React组件的生命周期创建期(五个阶段)1.getDefaultProps(获取默认属性)
-作用于组件类，只调用一次，返回对象用于设置默认的props，对于引用值，会在实例中共享。
-2.getInitialState (获取默认状态)
-作用于组件的实例，在实例创建时调用一次，用于初始化每个实例的state，此时可以访问this.props。
-3.componentWillMount (组件将要构">
-<meta property="og:updated_time" content="2017-03-15T03:36:33.000Z">
+<meta property="og:description" content="异步编程众所周知javascript是单线程的，但实际应用中难免会出现异步逻辑。所谓异步逻辑就是代码执行到此处并不会立即得到结果，直观上往往需要等待一段时间。比如文件读取、ajax异步接口调用。
+ES5对异步操作的处理局限于事件监听或异步回调。node的API均采用error-first的callback形式，因此出现了臭名昭著的回调地狱。通过层层嵌套的回调写法，实现异步操作的逻辑流程控制。目的虽">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fi5fq2lr4rj30m908974s.jpg">
+<meta property="og:updated_time" content="2017-08-02T08:00:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React生命周期">
-<meta name="twitter:description" content="React组件的生命周期创建期(五个阶段)1.getDefaultProps(获取默认属性)
-作用于组件类，只调用一次，返回对象用于设置默认的props，对于引用值，会在实例中共享。
-2.getInitialState (获取默认状态)
-作用于组件的实例，在实例创建时调用一次，用于初始化每个实例的state，此时可以访问this.props。
-3.componentWillMount (组件将要构">
+<meta name="twitter:title" content="promise的前因后果">
+<meta name="twitter:description" content="异步编程众所周知javascript是单线程的，但实际应用中难免会出现异步逻辑。所谓异步逻辑就是代码执行到此处并不会立即得到结果，直观上往往需要等待一段时间。比如文件读取、ajax异步接口调用。
+ES5对异步操作的处理局限于事件监听或异步回调。node的API均采用error-first的callback形式，因此出现了臭名昭著的回调地狱。通过层层嵌套的回调写法，实现异步操作的逻辑流程控制。目的虽">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1fi5fq2lr4rj30m908974s.jpg">
 
 
 
@@ -138,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/15/React生命周期/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/02/promise的前因后果/"/>
 
 
 
 
 
-  <title> React生命周期 | TangXu's Notes </title>
+  <title> promise的前因后果 | TangXu's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -317,7 +310,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/15/React生命周期/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/02/promise的前因后果/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tang Xu">
@@ -338,7 +331,7 @@
             
             
               
-                React生命周期
+                promise的前因后果
               
             
           </h1>
@@ -353,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T11:11:19+08:00">
-                2017-03-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-02T15:33:34+08:00">
+                2017-08-02
               </time>
             
 
@@ -372,8 +365,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/15/React生命周期/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/15/React生命周期/" itemprop="commentCount"></span>
+                <a href="/2017/08/02/promise的前因后果/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/08/02/promise的前因后果/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -399,35 +392,59 @@
       
 
       
-        <h2 id="React组件的生命周期"><a href="#React组件的生命周期" class="headerlink" title="React组件的生命周期"></a>React组件的生命周期</h2><h3 id="创建期-五个阶段"><a href="#创建期-五个阶段" class="headerlink" title="创建期(五个阶段)"></a>创建期(五个阶段)</h3><p>1.<code>getDefaultProps</code>(获取默认属性)</p>
-<p>作用于组件类，只调用一次，返回对象用于设置默认的props，对于引用值，会在实例中共享。</p>
-<p>2.<code>getInitialState</code> (获取默认状态)</p>
-<p>作用于组件的实例，在实例创建时调用一次，用于初始化每个实例的state，此时可以访问this.props。</p>
-<p>3.<code>componentWillMount</code> (组件将要构建)</p>
-<p>在完成首次渲染之前调用，此时仍可以修改组件的state。<br><a id="more"></a><br>4.<code>render</code> (组件渲染输出虚拟dom)</p>
-<p>必选的方法，创建虚拟DOM，该方法具有特殊的规则: 只能通过this.props和this.state访问数据 可以返回null、false或任何React组件 只能出现一个顶级组件（不能返回数组） 不能改变组件的状态 * 不能修改DOM的输出</p>
-<p>5.<code>componentDidMount</code>(组件渲染完成)</p>
-<p>真实的DOM被渲染出来后调用，在该方法中可通过this.getDOMNode()(也可以ReactDOM.findDOMNode(this))访问到真实的DOM元素。此时已可以使用其他类库来操作这个DOM。（在服务端中，该方法不会被调用）</p>
-<h3 id="存在期-五个阶段"><a href="#存在期-五个阶段" class="headerlink" title="存在期 (五个阶段)"></a>存在期 (五个阶段)</h3><p>1.<code>componentWillReceiveProps</code>(接受新的属性)</p>
-<p>组件接收到新的props时调用，并将其作为参数nextProps使用，此时可以更改组件props及state。</p>
-<pre><code>componentWillReceiveProps: function(nextProps) { 
-       if (nextProps.bool) { 
-                 this.setState({ bool: true }); 
-       }
-}
-</code></pre><p>2.<code>shouldComponentUpdate</code>(组建是否应该更新)</p>
-<p>**必须有返回值(return false/true)</p>
-<p>第一个参数是新属性</p>
-<p>第二个参数是新状态</p>
-<p>组件是否应当渲染新的props或state，返回false表示跳过后续的生命周期方法，通常不需要使用以避免出现bug。在出现应用的瓶颈时，可通过该方法进行适当的优化。</p>
-<p>3.<code>componentWillUpdate</code> (组件将要被更新)</p>
-<p>第一个参数是新属性<br>第二个参数是新状态</p>
-<p>接收到新的props或者state后，进行渲染之前调用，此时不允许更新props或state。</p>
-<p>4.<code>render</code>(组件更新输出dom)</p>
-<p>没有参数 这个阶段访问的都是旧的虚拟dom 只有之后的一个阶段访问的才是新的虚拟dom</p>
-<p>5.<code>componentDidUpdate</code>(组件更新完成)</p>
-<p>完成渲染新的props或者state后调用，此时可以访问到新的DOM元素。</p>
-<h3 id="销毁期-componentWillUnmount"><a href="#销毁期-componentWillUnmount" class="headerlink" title="销毁期 componentWillUnmount"></a>销毁期 <code>componentWillUnmount</code></h3><p>组件被移除之前被调用，可以用于做一些清理工作，在componentDidMount方法中添加的所有任务都需要在该方法中撤销，比如创建的定时器或添加的事件监听器。</p>
+        <h1 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h1><p>众所周知javascript是单线程的，但实际应用中难免会出现异步逻辑。所谓异步逻辑就是代码执行到此处并不会立即得到结果，直观上往往需要等待一段时间。比如文件读取、ajax异步接口调用。</p>
+<p>ES5对异步操作的处理局限于事件监听或异步回调。node的API均采用error-first的callback形式，因此出现了臭名昭著的回调地狱。通过层层嵌套的回调写法，实现异步操作的逻辑流程控制。目的虽然可以达到，但是写起代码来很难受。</p>
+<p>对于异步编程，社区提出了Promise方案，现已标准化。</p>
+<a id="more"></a>
+<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><p>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了 Promise 对象。</p>
+<ul>
+<li>从语法上说，Promise 是一个对象(函数对象)，通过对象自身属性和生成的实例，我们可以更合理化的进行流程控制。</li>
+<li>简单说Promise就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果</li>
+<li>Promise提供统一的 API，各种异步操作都可以用同样的方法进行处理。</li>
+</ul>
+<p>通过回调函数实现异步逻辑，我们可以自由的写回调不受限制。Promise的意义就是提出了一套异步编程的规范，同时通过按照Promise规范实现异步逻辑将能有效的避免回调，这是遵守规范的结果。这样一来，就起到了统一接口的作用。</p>
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p>通过Promise函数以及由它构造出的实例，我们可以实现链式调用写法的流程控制逻辑。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fi5fq2lr4rj30m908974s.jpg" alt=""></p>
+<p>Promise具有三种状态：pending、fulfilled和rejected。</p>
+<p>声明未执行的Promise实例是pending状态，执行完成并且调用resolve后是fulfilled状态，执行完成但是调用reject是rejected状态。</p>
+<ul>
+<li>（1）对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：Pending（进行中）、Resolved（已完成，又称 Fulfilled）和Rejected（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是Promise这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变。</li>
+<li>（2）一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从Pending变为Resolved和从Pending变为Rejected。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果。如果改变已经发生了，你再对Promise对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。</li>
+</ul>
+<h3 id="new-Promise"><a href="#new-Promise" class="headerlink" title="new Promise"></a>new Promise</h3><p>首先我们应当实例化一个具有异步操作的功能的Promise实例对象。</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var promise = new Promise(function(reslove,reject)&#123;</div><div class="line">    // resolve</div><div class="line">    if(true)&#123;</div><div class="line">        resolve(result);</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        reject(error);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Promise接受一个函数作为参数，函数参数默认有两个参数resolve和reject。根据异步操作的结果，我们可以执行相应的动作，比如成功则执行resolve,失败则执行reject。并且通过执行resolve或reject，可以将异步操作得到的结果传递下去。</p>
+<p>Promise新建后就会立即执行。</p>
+<h3 id="Promise-prototype-then"><a href="#Promise-prototype-then" class="headerlink" title="Promise.prototype.then"></a>Promise.prototype.then</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">promise.then(function(d) &#123;</div><div class="line">  console.log(d);</div><div class="line">&#125;,function(e) &#123;</div><div class="line">  console.log(e) // 单错误处理，只针对当前的then</div><div class="line">&#125;).catch(function(e) &#123;</div><div class="line">  console.log(e); // 当有多个then进行链式调用时，只要其中一个出现非resolve的状态，便会被捕获异常</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>当异步操作逻辑走到resolve或reject，Promise的状态分别变为fulfilled或rejected，状态变化后触发对应then中的两个handler，fulfilled状态对应onResolveFunction，rejected对应onRejectFunction。</p>
+<p>Promise可以通过resolve和reject函数对相应的handler进行传参。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Promise.prototype.then = function(success, fail) &#123;</div><div class="line">  this.done(success);</div><div class="line">  this.fail(fail);</div><div class="line">  return this;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>如上,是then的伪代码实现。</p>
+<h3 id="链式调用"><a href="#链式调用" class="headerlink" title="链式调用"></a>链式调用</h3><p>then的两个处理函数最终都会返回一个新的Promise实例（注意，不是原来那个Promise实例）。，因此可以进行链式调用。调用规则如下：</p>
+<ul>
+<li>then的处理函数中可以显示的return某个值</li>
+<li>return的是非Promise实例时，该值作为then返回的新的Promise实例的resolve的参数</li>
+<li>当return的是一个Promise实例时，相当于then返回的新实例就是这个实例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">promise.then(function(d) &#123;</div><div class="line">  console.log(d); // promise中resolve的参数</div><div class="line">&#125;).then(function(d) &#123;</div><div class="line">  console.log(d); // undefined</div><div class="line">  return new Promise(function(resolve) &#123;</div><div class="line">    setTimeout(function() &#123;</div><div class="line">      resolve(&apos;3&apos;);</div><div class="line">    &#125;, 3000);</div><div class="line">  &#125;);</div><div class="line">&#125;).then(function(d) &#123;</div><div class="line">  console.log(d); // 3</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Promise属性和方法"><a href="#Promise属性和方法" class="headerlink" title="Promise属性和方法"></a>Promise属性和方法</h3><ul>
+<li>Promise.prototype.catch()</li>
+<li>Promise.prototype.then()</li>
+<li>Promise.all()</li>
+<li>Promise.race()</li>
+<li>Promise.reject()</li>
+<li>Promise.resolve()</li>
+</ul>
+<p>如上便是所有关于Promise对象的属性和方法。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h3 id="回调"><a href="#回调" class="headerlink" title="回调"></a>回调</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var fs = require(&apos;fs&apos;);</div><div class="line">fs.readFile(&apos;/public/index.js&apos;, function(err, data) &#123;</div><div class="line">  if (err) &#123;</div><div class="line">    throw err;</div><div class="line">  &#125;</div><div class="line">  else &#123;</div><div class="line">    fs.readdir(&apos;path&apos;,&#123;&#125;,function(err,data) &#123;</div><div class="line">      // cb 嵌套</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>如上便是callback的嵌套写法。</p>
+<h3 id="Promise-1"><a href="#Promise-1" class="headerlink" title="Promise"></a>Promise</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">var promise1 = new Promise(</div><div class="line">    function(resolve, reject) &#123;</div><div class="line">      var result, data, error;</div><div class="line">      setTimeout(function() &#123;</div><div class="line">        result = true;</div><div class="line">        data = [1, 2, 3];</div><div class="line">        error = &apos;rejected&apos;;</div><div class="line">        if (result) &#123;</div><div class="line">          resolve(&apos;1&apos;);</div><div class="line">        &#125; else &#123;</div><div class="line">          reject(error);</div><div class="line">        &#125;</div><div class="line">      &#125;, 3000);</div><div class="line">    &#125;</div><div class="line">);</div><div class="line">var promise2 = new Promise(function(resolve, reject) &#123;</div><div class="line">  // ...</div><div class="line">&#125;);</div><div class="line">promise1.then(function(d) &#123;</div><div class="line">  // ...</div><div class="line">&#125;).then(function(d) &#123;</div><div class="line">  // ...</div><div class="line">  return promise2</div><div class="line">&#125;).then(function(d) &#123;</div><div class="line">  // ...</div><div class="line">  return new Promise(function(resolve,reject) &#123;</div><div class="line">    resolve(data);</div><div class="line">  &#125;</div><div class="line">&#125;).then(function(d) &#123;</div><div class="line">  // ...</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>如上便是Promise的链式调用写法，再简化一下我们可以将onResolveFunction或者onRejectFunction均提取出来，最终的调用执行形式便成了</p>
+<p><em>promise1.then(onResolve1(d)).then(onResolve2(d)).then(onResolve3(d)).then(onResolve4(d))</em></p>
+<p>Promise是解决异步操作的第一步，后续的还有generator和async。但是Promise是必须要掌握的，当async尘埃落定的时候，简洁易用的async+await异步模式将是未来最终的异步代码形式。</p>
+<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="external">MDN</a></p>
+<p><a href="http://es6.ruanyifeng.com/#docs/promise" target="_blank" rel="external">ES6-阮一峰</a></p>
 
       
     </div>
@@ -449,12 +466,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/React/" rel="tag"># React</a>
-          
-        </div>
-      
 
       
         
@@ -464,8 +475,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/13/webpack/" rel="next" title="webpack15个知识点!">
-                <i class="fa fa-chevron-left"></i> webpack15个知识点!
+              <a href="/2017/05/31/Vue2-0-组件库总结/" rel="next" title="Vue2.0+组件库总结">
+                <i class="fa fa-chevron-left"></i> Vue2.0+组件库总结
               </a>
             
           </div>
@@ -473,10 +484,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/17/转-AngularJS开发人员最常犯的10个错误/" rel="prev" title="[转]AngularJS开发人员最常犯的10个错误">
-                [转]AngularJS开发人员最常犯的10个错误 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -502,7 +509,7 @@
           
     <section id="comments">
    <!-- 多说评论框 start -->
-  <div id="ds-thread" class="ds-thread" data-thread-key="2017/03/15/React生命周期/" data-title="React生命周期" data-url="http://yoursite.com/2017/03/15/React生命周期/" }}"></div>
+  <div id="ds-thread" class="ds-thread" data-thread-key="2017/08/02/promise的前因后果/" data-title="promise的前因后果" data-url="http://yoursite.com/2017/08/02/promise的前因后果/" }}"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -618,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#React组件的生命周期"><span class="nav-number">1.</span> <span class="nav-text">React组件的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建期-五个阶段"><span class="nav-number">1.1.</span> <span class="nav-text">创建期(五个阶段)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存在期-五个阶段"><span class="nav-number">1.2.</span> <span class="nav-text">存在期 (五个阶段)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#销毁期-componentWillUnmount"><span class="nav-number">1.3.</span> <span class="nav-text">销毁期 componentWillUnmount</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#异步编程"><span class="nav-number">1.</span> <span class="nav-text">异步编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Promise"><span class="nav-number">2.</span> <span class="nav-text">Promise</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用"><span class="nav-number">3.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#new-Promise"><span class="nav-number">3.0.1.</span> <span class="nav-text">new Promise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise-prototype-then"><span class="nav-number">3.0.2.</span> <span class="nav-text">Promise.prototype.then</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链式调用"><span class="nav-number">3.0.3.</span> <span class="nav-text">链式调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise属性和方法"><span class="nav-number">3.0.4.</span> <span class="nav-text">Promise属性和方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#回调"><span class="nav-number">4.0.1.</span> <span class="nav-text">回调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise-1"><span class="nav-number">4.0.2.</span> <span class="nav-text">Promise</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文档"><span class="nav-number">4.0.2.1.</span> <span class="nav-text">参考文档</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
